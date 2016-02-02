@@ -1,7 +1,6 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var moment = require('moment');
 var Apartment = require('../models/apartment');
 var Tenant; 
 
