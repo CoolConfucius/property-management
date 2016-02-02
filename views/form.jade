@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  form
+    if state === 'addTenant'
+      .form-group
+        label(for='name') Name
+        input#name.password.form-control(type='text', placeholder='name')
+        button.btn.btn-default.register#addTenant(type='submit') Add Tenant
+    if state === 'addApartment'
+      .form-group
+        label(for='Total Rooms') Total Rooms 
+        input#totalRooms.password.form-control(type='number', placeholder='Total Rooms', min='1', step='1')
+        label(for='Rent per Room') Rent per Room 
+        input#rentPerRoom.password.form-control(type='number', placeholder='Rent per room', min='0.01', step='0.01')
+        label(for='imageURL') Image URL 
+        input#imageURL.password.form-control(type='text', placeholder='image url')
+        button.btn.btn-default.register#addApartment(type='submit') Add Apartment
+    
+block scripts
+  script(src="/js/form.js")
