@@ -5,6 +5,10 @@ block content
     h1 Ben and George's Property Management 
   .container#list
     if state==='tenants'
+      .row
+        .col-xs-2 Name
+        .col-xs-2 Status
+        hr
       each tenant in tenants 
         .row.tenant
           .col-xs-2.name= tenant.name

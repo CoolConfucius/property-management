@@ -8,17 +8,23 @@ block content
         .col-xs-2 Total Rooms
         .col-xs-2 Available Rooms
         .col-xs-2 Rent per Room
-        .row.apartment
+      .row.apartment
         .col-xs-2= apartment.totalRooms
         .col-xs-2= apartment.availableRooms
         .col-xs-2= apartment.rentPerRoom
+        hr
         img.imageDetail(src=apartment.imageURL)
+    hr
     .container#tenantslist
       .row
-        .col-xs-2 Tenants in Apt
-           each tenant in tenants 
-             .row.tenant
-               .col-xs-2.name= tenant.name
+        if tenants
+          if tenants[0]
+            .col-xs-2 Tenants in Apt:
+               each tenant in tenants 
+                 .row.tenant
+                   .col-xs-2.name= tenant.name
+          else 
+            .col-xs-3 Apartment is empty
         
         
 
