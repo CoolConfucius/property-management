@@ -10,7 +10,6 @@ function init(){
 
 function addTenant(e){
   e.preventDefault();
-  location.href = 
 
   $.post('/tenants', {name: $('#name').val()})
   .success(function() {

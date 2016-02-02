@@ -11,7 +11,7 @@ router.post('/', function(req, res, next) {
   Tenant.create(req.body, function(err, savedTenant) {
     console.log('saved tenant: ', savedTenant);
     res.status(err ? 400 : 200).send(err || savedTenant);
-  })
+  });
 });
 
 router.get('/', function(req, res, next) {
